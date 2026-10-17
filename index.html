@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Whisper ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Cormorant Garamond',serif;color:#843451;background:#ffe5ef;text-align:center}
+section{min-height:100vh;padding:80px 20px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#fff2f7,#f7b4ce,#f48db5)}
+.inner{max-width:750px;width:100%;position:relative;z-index:2}
+.script{font-family:'Great Vibes',cursive;font-weight:400;color:#c52f6c}
+h1{font-size:clamp(4rem,12vw,7rem);line-height:1;margin:25px 0}
+h2{font-size:clamp(3rem,8vw,5rem);margin:15px 0}
+.kicker{letter-spacing:5px;text-transform:uppercase;font-size:12px}
+p{font-size:20px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+button{background:#c52f6c;color:white;border:0;padding:14px 25px;border-radius:30px;font-size:16px;margin:8px;cursor:pointer;box-shadow:0 6px 18px #b72e6025}
+button:hover{transform:translateY(-2px)}
+.down{display:block;margin-top:45px;font-style:italic}
+.story{background:linear-gradient(135deg,#fff6fa,#f9c4d8)}
+.cards{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:35px 0}
+.card{background:#fff8fb;padding:22px;border-radius:20px;min-width:145px;box-shadow:0 10px 25px #a62d5510;font-size:18px}
+.card span{display:block;font-size:30px;margin-bottom:10px}
+.garden{background:linear-gradient(145deg,#ffe7f0,#f4a8c5)}
+.box{background:#fff8f9;border:1px solid white;border-radius:25px;padding:30px 20px;max-width:540px;margin:25px auto;box-shadow:0 15px 35px #a82d5815}
+#quote{font-size:25px;font-style:italic;min-height:75px}
+#count{font-size:14px;background:#ffe0eb;padding:6px 15px;border-radius:20px}
+.letter-section{background:linear-gradient(135deg,#fff7e8,#ffe4ef)}
+.envelope{height:105px;width:150px;margin:35px auto;background:#f6bad0;position:relative;cursor:pointer;border-radius:5px;box-shadow:0 10px 25px #a72c5615}
+.envelope:before{content:"";position:absolute;inset:0;background:#ffd8e6;clip-path:polygon(0 0,50% 60%,100% 0)}
+.envelope:after{content:"♥";position:absolute;top:40px;left:calc(50% - 12px);font-size:25px;color:#c52f6c}
+#letter{display:none;max-width:580px;margin:20px auto;background:#fff9ec;padding:30px;border-radius:12px;text-align:left;line-height:1.9;font-size:19px;white-space:pre-line;box-shadow:0 10px 25px #a72c5615}
+#letter.show{display:block;animation:appear .7s ease}
+.night{background:linear-gradient(145deg,#4d1038,#a31e5c,#ef85ad);color:#fff5fa}
+.night .script{color:#fff5fa}
+.night p{font-size:clamp(28px,5vw,45px);font-style:italic}
+.names{background:#fff5f9;min-height:60vh}
+input{padding:13px;border:1px solid #e5a2bd;border-radius:12px;margin:6px;width:min(250px,90%)}
+footer{padding:25px;background:#fff0f6}
+.petal{position:fixed;top:-35px;z-index:5;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:0}}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:550px){section{padding:60px 18px}.cards{flex-direction:column;align-items:center}.card{width:85%}}
+</style>
+</head>
+<body>
+
+<section class="hero" id="home">
+ <div class="inner">
+  <div class="kicker">A little love story</div>
+  <h1 class="script">Love Whisper</h1>
+  <p><i>...but ours is my favourite chapter ♡</i></p>
+  <p>Some feelings are too beautiful for ordinary words.<br>This little corner of the world is made with love.</p>
+  <a class="down" href="#story">Scroll to begin our journey<br>⌄</a>
+ </div>
+</section>
+
+<section class="story" id="story">
+ <div class="inner">
+  <div class="kicker">Our little universe</div>
+  <h2 class="script">Whispers of Love</h2>
+  <p>You are my greatest adventure 💗</p>
+  <p>In you, I found a love that feels like home,<br>a gentle warmth I have always known.<br>Through every season, through the years ahead,<br>I'll treasure the little things we've said.</p>
+  <div class="cards">
+   <div class="card"><span>🌹</span>Every day with you is a gift</div>
+   <div class="card"><span>💌</span>You are home, wherever you are</div>
+   <div class="card"><span>✨</span>I choose you in little ways</div>
+  </div>
+  <p class="script" style="font-size:38px">Yours, forever & always ♡</p>
+  <a href="#home"><button>Start Again ↶</button></a>
+ </div>
+</section>
+
+<section class="garden" id="garden">
+ <div class="inner">
+  <div class="kicker">A flower for you</div>
+  <h2 class="script">Garden of Love</h2>
+  <div class="box">
+   <div id="quote">Every moment with you is a petal in the garden of my heart.</div>
+   <p><span id="count">1 / 8</span></p>
+  </div>
+  <button onclick="pickRose()">🌹 Pick a Rose</button>
+  <p id="roseMessage" aria-live="polite"></p>
+ </div>
+</section>
+
+<section class="letter-section" id="letterSection">
+ <div class="inner">
+  <div class="kicker">A message from my heart</div>
+  <h2 class="script">The Love Letter</h2>
+  <p>Tap the envelope to open your surprise 💌</p>
+  <div class="envelope" onclick="openLetter()" role="button" tabindex="0" aria-label="Open love letter"></div>
+  <div id="letter">To You, My Love…
+
+There are not enough words to describe what you mean to me. You bring warmth to ordinary days and make little moments unforgettable.
+
+If life is a garden, I hope we keep choosing kindness, laughter, patience, and reasons to smile — one day at a time.
+
+Thank you for being part of my story. May our days be filled with honesty, respect, and care.
+
+With all my heart,
+Yours ♡</div>
+ </div>
+</section>
+
+<section class="night">
+ <div class="inner">
+  <div class="kicker">A midnight thought</div>
+  <p>“In the quiet of the night,<br>I found you.”</p>
+  <div class="script" style="font-size:55px">My favourite chapter ♡</div>
+ </div>
+</section>
+
+<section class="names">
+ <div class="inner">
+  <div class="kicker">Make this yours</div>
+  <h2 class="script">Our Names</h2>
+  <p>Write your names to personalise this page.</p>
+  <input id="name1" placeholder="Your name">
+  <input id="name2" placeholder="Their name">
+  <br><button onclick="showNames()">Update Names ♡</button>
+  <p class="script" id="result" style="font-size:40px"></p>
+  <small>Names appear as a preview on this page.</small>
+ </div>
+</section>
+
+<footer>Made with ♡ and a thousand little whispers.</footer>
+
+<script>
+const roses=[
+"Every moment with you is a petal in the garden of my heart.",
+"You are my today and all of my tomorrows.",
+"You are the reason I believe in beautiful things.",
+"My favourite place will always be beside you.",
+"You make ordinary moments feel like magic.",
+"Somewhere between hello and forever, you became home.",
+"May our story keep blooming, one day at a time.",
+"One little rose for one beautiful memory."
+];
+let index=0;
+function pickRose(){
+ index=(index+1)%roses.length;
+ document.getElementById("quote").textContent=roses[index];
+ document.getElementById("count").textContent=(index+1)+" / "+roses.length;
+ document.getElementById("roseMessage").textContent="A little rose, just for you 🌷💗";
+}
+function openLetter(){
+ document.getElementById("letter").classList.toggle("show");
+}
+function showNames(){
+ const a=document.getElementById("name1").value.trim()||"Your Name";
+ const b=document.getElementById("name2").value.trim()||"Their Name";
+ document.getElementById("result").textContent=a+" ♡ "+b;
+}
+function petals(){
+ const p=document.createElement("span");
+ p.className="petal";
+ p.textContent=["🌸","💗","♥","✿"][Math.floor(Math.random()*4)];
+ p.style.left=Math.random()*100+"vw";
+ p.style.fontSize=(13+Math.random()*17)+"px";
+ p.style.animationDuration=(7+Math.random()*7)+"s";
+ document.body.appendChild(p);
+ setTimeout(()=>p.remove(),15000);
+}
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+ setInterval(petals,650);
+}
+</script>
+</body>
+</html>
